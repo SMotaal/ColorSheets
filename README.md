@@ -4,4 +4,4 @@ This is repo contains very early attempts to take what I could do with MatLab, J
 
 > **Note**: I got it to work by serving it locally, still figuring out github pages setup for this to work.
 
-You can check out the [demo](./demo)
+You can check out the [demo](./index.html)
