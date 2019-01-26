@@ -16,24 +16,24 @@ grasppe = eval("(function (w) {'use strict'; if (typeof w.grasppe !== 'function'
         // Append static ColorSheetsApp properties before creating the module
         Object.assign(grasppe.ColorSheetsApp, {
             Mode: ('new'),
-            // !- ColorSheetsApp [ColorSheets] MainMenu 
+            // !- ColorSheetsApp [ColorSheets] MainMenu
             MainMenu: grasppe.ColorSheetsApp.createModel('MainMenu', {
                 title: ('ColorSheets'),
                 directive: 'color-sheets-main-menu', directives: {
-                    // !- ColorSheetsApp [Directives] colorSheetsMainMenu 
+                    // !- ColorSheetsApp [Directives] colorSheetsMainMenu
                     colorSheetsMainMenu: function colorSheetsMainMenu() {
                         return {
                             controller: ['$scope', '$element', '$mdToast', '$mdDialog', function colorSheetsMainMenuController($scope, element, $mdToast, $mdDialog) {
                                 console.log('colorSheetsMainMenu::controller')
                             }],
                             link: function colorSheetsMainMenuPostLink($scope, element, attributes) {},
-                            template: ('<p>Hello World!</p>'),
+                            template: ('<p>Since this is legacy, you have to do some work to get started, move you pointer and click on the to the top left hamburger thingy... enjoy ;)</p>'),
                         };
                     },
                 },
             }),
         }), Object.assign(grasppe.ColorSheetsApp.Directives, {
-            // !- ColorSheetsApp [Directives] colorSheet 
+            // !- ColorSheetsApp [Directives] colorSheet
             ColorSheet: grasppe.ColorSheetsApp.createDirective('colorSheet', {
                 controller: ['$scope', '$element', grasppe.ColorSheetsApp.createController('ColorSheetController', {
                     initialize($scope, element) {
@@ -79,7 +79,7 @@ grasppe = eval("(function (w) {'use strict'; if (typeof w.grasppe !== 'function'
                         // console.log(id, $controller, $controller.prototype);
                         if ($controller.prototype && $controller.prototype.$controller) $controller = $controller.prototype.$controller;
                         if ($controller.$controller) $controller = $controller.$controller;
-                        module.controller(id, $controller); // if (!injector.has(id)) 
+                        module.controller(id, $controller); // if (!injector.has(id))
                     }
                 }
             }
@@ -193,7 +193,7 @@ grasppe = eval("(function (w) {'use strict'; if (typeof w.grasppe !== 'function'
 
                         if (!sheet.directive) return;
 
-                        // Destroy latent $sheet scope                        
+                        // Destroy latent $sheet scope
                         ($sheet.destroy && $sheet.destroy()) || ($sheet.$destroy && $app.$sheet.$destroy());
 
                         // Prepare new $sheet scope
@@ -212,13 +212,13 @@ grasppe = eval("(function (w) {'use strict'; if (typeof w.grasppe !== 'function'
                                 sheetID: sheetID,
                             }),
                         }), $sheet = $app.$sheet;
-                        
+
                         for (var key in $sheet.options) if (key in urlParameters) $sheet.options[key] = urlParameters[key];
 
                         for (var key in $sheet.parameters) if (key in urlParameters) $sheet.parameters[key] = urlParameters[key];
-                        
+
                         $sheet.$sheet = $sheet;
-                        
+
                         console.log('navigateTo — $sheet.options', $sheet.options);
 
                         // Update $app model
