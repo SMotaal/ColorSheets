@@ -27,7 +27,7 @@ grasppe = eval("(function (w) {'use strict'; if (typeof w.grasppe !== 'function'
                                 console.log('colorSheetsMainMenu::controller')
                             }],
                             link: function colorSheetsMainMenuPostLink($scope, element, attributes) {},
-                            template: ('<p>Since this is legacy, you have to do some work to get started, move you pointer and click on the to the top left hamburger thingy... enjoy ;)</p>'),
+                            template: ('<p>Since this is legacy, you have to do some work to get started, move you pointer and click on the top left hamburger thingy... enjoy ;)</p>'),
                         };
                     },
                 },
